@@ -1,4 +1,4 @@
-Käynnistäeksesi projektin tarvitset koneellesi Node.js
+Käynnistäeksesi projektin tarvitset koneellesi Node.js/npm
 
 Lisätäksesi node moduulit projektiin käytä seuraavaa komentoa:
 >npm install
