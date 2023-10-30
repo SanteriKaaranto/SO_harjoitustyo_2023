@@ -11,9 +11,9 @@ import "./index.css";
 
 // Komponentti muotoilee headerin
 const Header = ({ itemname, itemnumber, onDelete }) => (
-  <div id="itemDiv">
+  <div className="item-container">
     <p>{itemname}</p>
-    <p id="NumberOfItems">{itemnumber} kpl</p>
+    <p>{itemnumber} kpl</p>
     <button onClick={onDelete} id="deleteButton">
       Poista
     </button>
@@ -105,24 +105,22 @@ const App = () => {
   };
 
   return (
-    <div id="sisalto">
+    <div className="sisalto">
       <h2>Ostoslista</h2>
 
       {/* Form joka sisältää datan syöttö kentät ja napin */}
-      <form onSubmit={addItem} id="inputForm">
+      <form onSubmit={addItem}>
         <input
           value={newItem}
           onChange={(e) => setNewItem(e.target.value)}
           placeholder="Syötä tuote..."
-          maxLength={50}
-          id="item"
+          maxLength={40}
         />
 
         <input
           value={numberOfItems}
           onChange={(e) => setNumberOfItems(e.target.value)}
           placeholder="Määrä..."
-          id="maara"
         />
 
         <button type="submit">Lisää</button>

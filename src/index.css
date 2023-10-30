@@ -1,70 +1,71 @@
-p {
-    display: inline;
-  }
-
-#deleteButton {
-    margin-left: 10px;
-    background-color: #fc8282; 
-    border: none;
-    border-radius: 5px;
-    padding: 2px 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-#deleteButton:hover {
-    background-color: #fb5050;
-    color: white;
-  }
-
-#itemDiv {
-    margin: 0 0 5px 0px;
-    
-}
-
-#sisalto {
-    margin-left: 10px;
-}
-
 * {
-    font-family: Helvetica;
+  font-family: Helvetica;
 }
-
-#NumberOfItems {
-    margin-left: 50px;
-}
-
-#inputForm {
-    margin: 25px 0px 25px 0px;
-}
-
-#inputForm button {
-    margin-left: 5px;
-    background-color: #5bc9fc; 
-    border: none;
-    border-radius: 5px;
-    padding: 5px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-#item {
-    width: 150px;
-    height: 20px;
-}
-
-#inputForm button:hover {
-    background-color: #059be1; 
-    color: white;
-  }
 
 body {
-    background-color: #d9d9d9;
+  background-color: #d9d9d9;
 }
 
-#maara {
-    width: 60px;
-    height: 20px;
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 475px;
+  margin-bottom: 5px;
+}
+
+.item-container p {
+  margin: 0;
+}
+
+.item-container p:nth-child(2) {
+  margin-left: auto;
+}
+
+.item-container button {
+  margin-left: 10px;
+  background-color: #fc8282;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.item-container button:hover {
+  background-color: #fb5050;
+  color: white;
+}
+
+.sisalto {
+  margin-left: 10px;
+}
+
+.sisalto form {
+  margin: 25px 0px;
+}
+
+.sisalto form button {
+  margin-left: 5px;
+  background-color: #5bc9fc;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sisalto form button:hover {
+  background-color: #059be1;
+  color: white;
+}
+
+.sisalto input {
+  width: 150px;
+  height: 20px;
+}
+
+.sisalto input:nth-child(2) {
+  width: 60px;
+  height: 20px;
 }
