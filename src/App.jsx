@@ -14,7 +14,7 @@ const Header = ({ itemname, itemnumber, onDelete }) => (
   <div className="item-container">
     <p>{itemname}</p>
     <p>{itemnumber} kpl</p>
-    <button onClick={onDelete} id="deleteButton">
+    <button onClick={onDelete}>
       Poista
     </button>
   </div>
