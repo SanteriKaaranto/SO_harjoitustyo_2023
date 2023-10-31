@@ -1,26 +1,20 @@
 // Santeri Kaaranto TITE21. Selainohjelmointi harjoitustyö 2023.
 
-// Komennot
-//npm run server
-//npm run dev
-
 // Importit
 import { useState, useEffect } from "react";
 import dataService from "./services/items";
 import "./index.css";
 
-// Komponentti muotoilee headerin
+// Header muuttuja. Muotoilee tuoterivin
 const Header = ({ itemname, itemnumber, onDelete }) => (
   <div className="item-container">
     <p>{itemname}</p>
     <p>{itemnumber} kpl</p>
-    <button onClick={onDelete}>
-      Poista
-    </button>
+    <button onClick={onDelete}>Poista</button>
   </div>
 );
 
-// Komponentille annetaan tuote propertynä ja muotoillaan se.
+// Muuttujalle annetaan tuote propertynä ja muotoillaan se.
 const Item = ({ item, onDelete }) => {
   return (
     <div>
@@ -38,14 +32,15 @@ const App = () => {
   const [newItem, setNewItem] = useState("");
   const [numberOfItems, setNumberOfItems] = useState([]);
 
-  // Funktio datan hakemiseen json palvelimelta
+  // Muuttuja datan hakemiseen json palvelimelta.
   const fetchData = () => {
+    // Käyttää erillisessä tiedostossa olevia axios komentoja, joita voidaan käyttää annetun 'dataService' avulla.
     dataService
       .getAll()
       .then((initialData) => {
         console.log("Datan hakeminen onnistui");
         setItems(initialData);
-      })
+      }) // Napataan virhe, jos dataa ei voitu hakea.
       .catch((error) => {
         console.error("Virhe haettaessa dataa:", error);
       });
@@ -54,7 +49,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  // Funktio datan poistamiseen
+  // Muuttuja datan poistamiseen
   const deleteItem = (id) => {
     // Lähettää poistamis pyynnön palvelimelle
     dataService
@@ -70,7 +65,8 @@ const App = () => {
 
   // Tuotteiden lisääminen
   const addItem = (event) => {
-    event.preventDefault();
+    // Estää alkuperäisen toiminnallisuuden, eli tässä tapauksessa formin aiheuttaman sivun uudelleenlatauksen.
+    event.preventDefault(); 
 
     // Tarkistetaan, että tuote ja määrä ei ole tyhjiä tai 0
     if (newItem.trim() === "" || numberOfItems === 0) {
