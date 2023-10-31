@@ -122,7 +122,7 @@ const App = () => {
         <button type="submit">Lisää</button>
       </form>
 
-      {/* map funktio käy datan läpi ja luo niistä propertyt, jotka lähetetään item komponenttiin. */}
+      {/* map funktio käy datan läpi ja luo niistä propertyt, jotka lähetetään item muuttujalle. */}
       {items.map((item) => (
         <div key={item.id}>
           <Item item={item} onDelete={() => deleteItem(item.id)} />
