@@ -3,11 +3,11 @@ Käynnistäeksesi projektin tarvitset koneellesi Node.js/npm
 Node moduulien lisäys projektiin
 
 > cd server
->>npm install
+>npm install
 ...
 >cd client
 >>npm install
 
 Sovelluksen käynnistäminen
 > cd server & cd client
->> npm start
+> npm start
