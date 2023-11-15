@@ -19,6 +19,6 @@ Sovelluksen käynnistäminen
 
 &
 
-> cd server
+> cd client
 
 > npm start
