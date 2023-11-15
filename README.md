@@ -4,10 +4,13 @@ Node moduulien lisäys projektiin
 
 > cd server
 > npm install
-...
+&
 > cd client
 > npm install
 
 Sovelluksen käynnistäminen
-> cd server & cd client
+> cd server 
+> npm start
+&
+> > cd server 
 > npm start
