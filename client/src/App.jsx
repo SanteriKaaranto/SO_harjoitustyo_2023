@@ -66,7 +66,7 @@ const App = () => {
   // Tuotteiden lisääminen
   const addItem = (event) => {
     // Estää alkuperäisen toiminnallisuuden, eli tässä tapauksessa formin aiheuttaman sivun uudelleenlatauksen.
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Tarkistetaan, että tuote ja määrä ei ole tyhjiä tai 0
     if (newItem.trim() === "" || numberOfItems === 0) {
@@ -123,6 +123,7 @@ const App = () => {
       </form>
 
       {/* map funktio käy datan läpi ja luo niistä propertyt, jotka lähetetään item muuttujalle. */}
+
       {items.map((item) => (
         <div key={item.id}>
           <Item item={item} onDelete={() => deleteItem(item.id)} />

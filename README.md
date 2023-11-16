@@ -1,9 +1,24 @@
 Käynnistäeksesi projektin tarvitset koneellesi Node.js/npm
 
-Lisätäksesi node moduulit projektiin käytä seuraavaa komentoa projektin juurihakemistossa:
->npm install
+Node moduulien lisäys projektiin
 
-Sovelluksen pyörittämiseen käytä seuraavia komentoja juurihakemistossa:
->npm run server
+> cd server
 
->npm run dev
+> npm install
+
+&
+
+> cd client
+
+> npm install
+
+Sovelluksen käynnistäminen
+> cd server
+
+> npm start
+
+&
+
+> cd client
+
+> npm start
