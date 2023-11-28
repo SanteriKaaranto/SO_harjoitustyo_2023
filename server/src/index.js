@@ -1,6 +1,7 @@
 import express from "express";
 import fs from "fs/promises"; // tiedostojen luku modeli
 import cors from "cors"; // Antaa palvelimen vastaanottaa pyyntöjä eri porteista
+
 const app = express();
 
 app.use(express.json(), cors());
@@ -34,7 +35,7 @@ app.post("/api/items", (request, response) => {
     });
   }
 
-  // Objekti, joka lisätään tiedostoon.
+  // Muuttuja, joka lisätään tiedostoon.
   const newItem = {
     name: body.name,
     count: body.count,
@@ -72,3 +73,4 @@ const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}/`);
 });
+
