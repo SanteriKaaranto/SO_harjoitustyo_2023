@@ -1,3 +1,7 @@
+NodeJS:llä toteutettu ostoslista sovellus
+
+------------------------------------------------------------------------
+
 Käynnistäeksesi projektin tarvitset koneellesi Node.js/npm
 
 Node moduulien lisäys projektiin
